@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/astro", "crates/app"]
+
+# Low-RAM sandbox: no debuginfo, single codegen unit where possible, dev build is what we run.
+[profile.dev]
+debug = 0
+opt-level = 1
+incremental = true
+
+[profile.release]
+opt-level = 2
+lto = "thin"

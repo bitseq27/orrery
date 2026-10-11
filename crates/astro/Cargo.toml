@@ -1,0 +1,14 @@
+[package]
+name = "orrery-astro"
+version = "0.1.0"
+edition = "2021"
+description = "ORRERY ephemeris engine: time base, truncated VSOP87D, Kepler two-body propagation"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+vsop87 = "3.0"
+
+[dependencies.serde_json]
+version = "1"
+
+[dev-dependencies]
